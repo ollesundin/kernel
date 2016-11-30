@@ -65,6 +65,7 @@ struct old_linux_dirent;
 struct perf_event_attr;
 struct file_handle;
 struct sigaltstack;
+struct User_info;
 union bpf_attr;
 
 #include <linux/types.h>
@@ -889,6 +890,6 @@ asmlinkage long sys_membarrier(int cmd, int flags);
 
 asmlinkage long sys_mlock2(unsigned long start, size_t len, int flags);
 
-asmlinkage long sys_hello(void);
+asmlinkage long sys_hello(struct User_info* info);
 
 #endif
